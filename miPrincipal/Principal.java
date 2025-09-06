@@ -17,15 +17,22 @@ public class Principal {
         pila.Mostrar();
 
         Cola<Object> cola = new Cola<>(5);
-
+        cola.insertar("jose");
         cola.insertar(10.0);
         cola.insertar(20.0);
         cola.insertar(30.0);
 
-        cola.mostrar(); // Cola: 10 20 30
+        cola.mostrar(); 
 
         cola.eliminar();
-        cola.mostrar(); // Cola: 20 30
+        cola.eliminar();
+        cola.mostrar(); 
+        cola.insertar("jano");
+        cola.insertar("memo");
+        cola.mostrar();
+        cola.eliminar();
+        cola.eliminar();
+        cola.mostrar(); 
 
 
     }

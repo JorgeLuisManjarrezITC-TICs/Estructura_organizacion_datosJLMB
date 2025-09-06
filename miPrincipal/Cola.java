@@ -9,6 +9,8 @@ public class Cola<T>{
     public Cola(int maximo){
         max = maximo;
         cola = (T[]) new Object[max];
+        frente = -1;
+        fin = -1;
     }
 
     public boolean vacia(){
