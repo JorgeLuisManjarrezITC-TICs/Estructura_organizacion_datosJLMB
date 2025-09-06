@@ -1,4 +1,5 @@
-package miprincipal;
+package miPrincipal;
+
 public class Cola<T>{
     private T[] cola;
     private int frente;
