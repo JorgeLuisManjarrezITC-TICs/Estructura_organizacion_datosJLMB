@@ -31,6 +31,19 @@ public class Principal {
         cola.insertar("memo");
         cola.mostrar(); 
 
+        Lista<Object> lista = new Lista<>(6);
+        lista.insertarInicio("jano");
+        lista.insertarInicio(10.0);
+        lista.insertarInicio(20.0);
+        lista.insertarFinal("jose");
+        lista.insertarFinal("jorge");
+        lista.mostrar();
+        lista.retirarInicio();
+        lista.mostrar();
+        lista.retirarFin();
+        lista.mostrar();
+
+
 
     }
 }
