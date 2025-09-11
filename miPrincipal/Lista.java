@@ -3,7 +3,7 @@ package miPrincipal;
 public class Lista<T> {
     Nodo inicio;
     Nodo fin;
-    int tamanio;
+    int tamaño;
 
     public boolean listaVacia(){
         return (inicio == null && fin == null);
@@ -17,7 +17,7 @@ public class Lista<T> {
         }
         nodo.setSig(inicio);
         inicio = nodo;
-        tamanio++;
+        tamaño++;
     }
     public void insertarFinal(T elemento){
         Nodo nodo = new Nodo(elemento);
@@ -27,7 +27,7 @@ public class Lista<T> {
         }
         fin.setSig(nodo);
         fin = nodo;
-        tamanio++;
+        tamaño++;
     }
     public Nodo retirarInicio(){
         Nodo aux;
@@ -36,11 +36,11 @@ public class Lista<T> {
             if(inicio == fin) {
                 inicio = null;
                 fin = null;
-                tamanio--;
+                tamaño--;
             }else{
                 inicio = inicio.getSig();
                 aux.setSig(null);
-                tamanio--;
+                tamaño--;
             }
             return aux;
         }else
@@ -57,4 +57,11 @@ public class Lista<T> {
             fin.setSig(null);
             return aux;
     }
+    public mostrar(){
+        nodo aux = inicio;
+        while(aux != null){
+            aux.mostrar();
+            aux = aux.sig;
+    }
+}
 }
