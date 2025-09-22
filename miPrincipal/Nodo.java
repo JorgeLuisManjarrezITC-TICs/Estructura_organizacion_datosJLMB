@@ -21,6 +21,19 @@ public class Nodo<T>{
         this.sig = sig;
     }
 
+    // Métodos compatibles con ListaOrdenada.java
+    public int getValor() {
+        return (Integer) dato;
+    }
+
+    public Nodo getSiguiente() {
+        return sig;
+    }
+
+    public void setSiguiente(Nodo siguiente) {
+        this.sig = siguiente;
+    }
+
     public void mostrar() {
         System.out.println(dato);
     }

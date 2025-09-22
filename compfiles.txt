@@ -4,3 +4,4 @@
 ./miPrincipal/Pila.java
 ./miPrincipal/Nodo.java
 ./miPrincipal/Principal.java
+./miPrincipal/ListaOrdenada.java
