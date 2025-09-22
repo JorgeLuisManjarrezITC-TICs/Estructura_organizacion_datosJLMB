@@ -1,15 +1,20 @@
 package miPrincipal;
 
+
 public class Lista<T> {
-    Nodo inicio;
-    Nodo fin;
+    Nodo<T> inicio;
+    Nodo<T> fin;
+
+    public Lista(int capacidad) {
+        // Si necesitas usar la capacidad, agrégala como campo y úsala aquí
+    }
 
     public boolean listaVacia(){
         return (inicio == null && fin == null);
     }
 
     public void insertarInicio(T elemento){
-        Nodo nodo = new Nodo(elemento);
+        Nodo<T> nodo = new Nodo<>(elemento);
         if(listaVacia()){
             inicio = nodo;
             fin = nodo;
@@ -18,16 +23,16 @@ public class Lista<T> {
         inicio = nodo;
     }
     public void insertarFinal(T elemento){
-        Nodo nodo = new Nodo(elemento);
+        Nodo<T> nodo = new Nodo<>(elemento);
         if(listaVacia()){
             inicio = nodo;
             fin = nodo;
         }
         fin.setSig(nodo);
         fin = nodo;
-        }
-    public Nodo retirarInicio(){
-        Nodo aux;
+    }
+    public Nodo<T> retirarInicio(){
+        Nodo<T> aux;
         if(!listaVacia()){
             aux = inicio;
             if(inicio == fin) {
@@ -41,22 +46,21 @@ public class Lista<T> {
         }else
             return null;
     }
-    public Nodo retirarFin(){
-            Nodo aux = inicio;
-            while(aux.getSig()!=fin){
-                System.out.println(aux);
-                aux = aux.getSig();
-            }
-            fin = aux;
+    public Nodo<T> retirarFin(){
+        Nodo<T> aux = inicio;
+        while(aux.getSig()!=fin){
             aux = aux.getSig();
-            fin.setSig(null);
-            return aux;
+        }
+        fin = aux;
+        aux = aux.getSig();
+        fin.setSig(null);
+        return aux;
     }
-    public mostrar(){
-        nodo aux = inicio;
+    public void mostrar(){
+        Nodo<T> aux = inicio;
         while(aux != null){
             aux.mostrar();
-            aux = aux.sig;
+            aux = aux.getSig();
+        }
     }
-}
 }

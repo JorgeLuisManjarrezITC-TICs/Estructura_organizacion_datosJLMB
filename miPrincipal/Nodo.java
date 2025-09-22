@@ -21,4 +21,8 @@ public class Nodo<T>{
         this.sig = sig;
     }
 
+    public void mostrar() {
+        System.out.println(dato);
+    }
+
 }
