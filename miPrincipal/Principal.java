@@ -44,6 +44,15 @@ public class Principal {
         lista.mostrar();
 
 
+        System.out.println("------------------Lista Ordenada------------------");
+        ListaOrdenada listaOrdenada = new ListaOrdenada();
+        listaOrdenada.insertar(5);
+        listaOrdenada.insertar(2);
+        listaOrdenada.insertar(5);
+        listaOrdenada.mostrar();
+        listaOrdenada.eliminar(5);
+        listaOrdenada.mostrar();
+
 
     }
 }

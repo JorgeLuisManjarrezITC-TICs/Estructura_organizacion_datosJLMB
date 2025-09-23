@@ -12,7 +12,7 @@ public class ListaOrdenada{
 
     public void insertar(int valor) {
         Nodo nuevoNodo = new Nodo(valor);
-        if (cabeza == null || cabeza.getDato() >= valor) {
+        if (cabeza == null || cabeza.getValor() >= valor) {
             nuevoNodo.setSiguiente(cabeza);
             cabeza = nuevoNodo;
         } else {
@@ -62,7 +62,7 @@ public class ListaOrdenada{
         return size;
     }
 
-    public void imprimir() {
+    public void mostrar() {
         Nodo actual = cabeza;
         while (actual != null) {
             System.out.print(actual.getValor() + " -> ");
