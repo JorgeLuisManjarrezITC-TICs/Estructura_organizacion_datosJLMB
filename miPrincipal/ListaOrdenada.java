@@ -12,6 +12,7 @@ public class ListaOrdenada{
 
     public void insertar(int valor) {
         Nodo nuevoNodo = new Nodo(valor);
+        if (!buscar(valor)){
         if (cabeza == null || cabeza.getValor() >= valor) {
             nuevoNodo.setSiguiente(cabeza);
             cabeza = nuevoNodo;
@@ -24,6 +25,7 @@ public class ListaOrdenada{
             actual.setSiguiente(nuevoNodo);
         }
         size++;
+    }
     }
 
     public boolean eliminar(int valor) {
@@ -51,7 +53,9 @@ public class ListaOrdenada{
         Nodo actual = cabeza;
         while (actual != null && actual.getValor() <= valor) {
             if (actual.getValor() == valor) {
+                System.out.println("valor encontrado: " + actual.getValor());
                 return true;
+                
             }
             actual = actual.getSiguiente();
         }
@@ -65,9 +69,9 @@ public class ListaOrdenada{
     public void mostrar() {
         Nodo actual = cabeza;
         while (actual != null) {
-            System.out.print(actual.getValor() + " -> ");
+            System.out.print(actual.getValor() + " , ");
             actual = actual.getSiguiente();
         }
-        System.out.println("null");
+        System.out.println("fin de la lista");
     }
 }
