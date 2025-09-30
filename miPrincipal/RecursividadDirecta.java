@@ -6,6 +6,8 @@ public class RecursividadDirecta{
         System.out.println("la suma de los primeros " + n + " numeros es: " + suma(n));
         System.out.println("el factrorial de " + n + " es: " + factorial(n));
         System.out.println("El resultado de " + n + " elevado a la 2 es: "+ potencia(n, 2));
+        System.out.println("El numero fibonacci en la posicion " + n + " es: " + fibonacci(n));
+        imprimir(10);
 
     }
 
@@ -37,4 +39,25 @@ public class RecursividadDirecta{
         }
 
     }
-}
+
+    //metodo fibonacci
+    public static int fibonacci(int n){
+        if (n==0 || n==1){
+            return n;
+        }else{
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
+
+    }
+
+    //metodo recursivo para imprimir 10 veces hola
+    public static void imprimir(int n){
+        if (n==0){
+            System.out.println("hola");
+        }else{
+            System.out.println("hola");
+            imprimir(n-1);
+        }
+    }
+    }
+
