@@ -7,7 +7,7 @@ public class RecursividadDirecta{
         System.out.println("el factrorial de " + n + " es: " + factorial(n));
         System.out.println("El resultado de " + n + " elevado a la 2 es: "+ potencia(n, 2));
         System.out.println("El numero fibonacci en la posicion " + n + " es: " + fibonacci(n));
-        imprimir(10);
+        imprimir(7, 1);
 
     }
 
@@ -50,14 +50,15 @@ public class RecursividadDirecta{
 
     }
 
-    //metodo recursivo para imprimir 10 veces hola
-    public static void imprimir(int n){
-        if (n==0){
-            System.out.println("hola");
+    //metodo recursivo para imprimir una tabla de multiplicar
+    public static void imprimir(int n, int i){
+        if (i>10){
+            return;
         }else{
-            System.out.println("hola");
-            imprimir(n-1);
+            System.out.println(n + " * " + i + " = " + (n*i));
+            imprimir(n, i+1);
         }
+       
     }
     }
 
