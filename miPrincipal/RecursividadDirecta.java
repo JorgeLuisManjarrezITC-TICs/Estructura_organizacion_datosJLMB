@@ -60,5 +60,13 @@ public class RecursividadDirecta{
         }
        
     }
+
+    public static int hola(int a, int b){
+    
     }
+
+
+
+
+}
 
