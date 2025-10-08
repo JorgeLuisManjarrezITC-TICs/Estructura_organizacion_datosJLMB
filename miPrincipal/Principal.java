@@ -94,8 +94,12 @@ public class Principal {
                     String telefono = leer.nextLine();
                     System.out.print("Email: ");
                     String email = leer.nextLine();
-                    agenda.agregarContacto(new Contacto(nombre, telefono, email));
+                    Contacto nuevo = new Contacto(nombre, telefono, email);
+                    if (agenda.agregarContacto(nuevo)) {
                     System.out.println("Contacto agregado.");
+                    } else {
+                    System.out.println("Error: Ya existe un contacto con ese número de teléfono.");
+                    }
                     break;
                 case 2:
                     System.out.print("Nombre del contacto a buscar: ");
