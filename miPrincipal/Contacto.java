@@ -2,10 +2,10 @@ package miPrincipal;
 
 public class Contacto {
     public String nombre;
-    public int telefono;
+    public String telefono;
     public String email;
 
-    public Contacto(String nombre, int telefono, String email){
+    public Contacto(String nombre, String telefono, String email){
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
@@ -17,10 +17,10 @@ public class Contacto {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
     public String getEmail() {
