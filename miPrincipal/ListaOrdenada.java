@@ -65,6 +65,9 @@ public class ListaOrdenada{
     public int getSize() {
         return size;
     }
+    public Nodo getCabeza() {
+        return cabeza;
+    }
 
     public void mostrar() {
         Nodo actual = cabeza;
